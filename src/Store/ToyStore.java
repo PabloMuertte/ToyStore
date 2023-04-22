@@ -1,28 +1,59 @@
 package Store;
 
-import java.util.*;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
 
 public class ToyStore {
-    private PriorityQueue<Toy> queue;
+    private ArrayList<Toy> toys;
+    private ArrayList<Toy> prizeToys;
+    private String prizeFilePath;
 
     public ToyStore() {
-        queue = new PriorityQueue<>(Comparator.comparing(Toy::getChance).reversed());
+        toys = new ArrayList<Toy>();
+        prizeToys = new ArrayList<Toy>();
+        prizeFilePath = "/home/pablo/IdeaProjects/ToyStore/src/Store/prize_toys.txt";
     }
 
     public void addToy(Toy toy) {
-        queue.add(toy);
+        toys.add(toy);
     }
 
-    public Toy getRandomToy() {
-        double randomNumber = Math.random();
-
-        for (Toy toy : queue) {
-            if (randomNumber < toy.getChance()) {
-                return toy;
+    public void changeToyFrequency(int toyId, double newFrequency) {
+        for (Toy toy : toys) {
+            if (toy.getId() == toyId) {
+                toy.setFrequency(newFrequency);
             }
-            randomNumber -= toy.getChance();
         }
+    }
 
-        return null;
+    public void organizeRaffle() {
+        prizeToys.clear();
+
+        for (Toy toy : toys) {
+            double random = Math.random() * 100;
+            if (random < toy.getFrequency()) {
+                prizeToys.add(toy);
+            }
+        }
+    }
+    public Toy getPrizeToy() {
+        if (!prizeToys.isEmpty()) {
+            Toy prizeToy = prizeToys.remove(0);
+            prizeToy.setQuantity(prizeToy.getQuantity() - 1);
+
+            try {
+                FileWriter writer = new FileWriter(prizeFilePath, true);
+                writer.write(prizeToy.getName() + "\n");
+                writer.close();
+            } catch (IOException e) {
+                System.out.println("Error of write in file Toys");
+            }
+
+            return prizeToy;
+        } else {
+            System.out.println("All toys hand out");
+            return null;
+        }
     }
 }
