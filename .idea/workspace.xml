@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a4ecb72-5f77-46bf-8e44-56b6ffc4cd3d" name="Changes" comment="">
+    <list default="true" id="9a4ecb72-5f77-46bf-8e44-56b6ffc4cd3d" name="Changes" comment="Task 2 complete">
       <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
@@ -12,6 +15,7 @@
       <change afterPath="$PROJECT_DIR$/src/Store/Main.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/Store/Toy.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/Store/ToyStore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Store/output.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +47,10 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -54,11 +62,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1682153181978</updated>
-      <workItem from="1682153183427" duration="303000" />
+      <workItem from="1682153183427" duration="707000" />
     </task>
+    <task id="LOCAL-00001" summary="Task 2 complete">
+      <created>1682153889574</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1682153889574</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Task 2 complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="Task 2 complete" />
   </component>
 </project>
